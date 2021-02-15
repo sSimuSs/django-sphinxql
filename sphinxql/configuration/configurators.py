@@ -53,7 +53,14 @@ DEFAULT_SOURCE_PARAMS = {'sql_host': 'localhost',
 DEFAULT_SEARCHD_PARAMS = {'listen': '9306:mysql41',
                           }
 
-DEFAULT_INDEX_PARAMS = {'type': 'plain'}
+DEFAULT_INDEX_PARAMS = {'type': 'plain',
+                        'morphology': 'stem_enru, Soundex, Metaphone',
+                        'dict': 'keywords',
+                        'index_exact_words': 1,
+                        'expand_keywords': 1,
+                        'min_word_len': 1,
+                        'min_prefix_len': 3,
+                        }
 
 
 def _pymysql_mogrify(cursor, query, args=None):
