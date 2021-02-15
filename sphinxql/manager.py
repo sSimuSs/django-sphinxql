@@ -1,5 +1,5 @@
 import inspect
-from django.utils import six
+import six
 
 
 class IndexManager(object):
